@@ -1,15 +1,13 @@
 let timerInterval;
-let timeRemaining = 15.0; // Set default time to 15 seconds
+let timeRemaining = 15.0;
 let isPaused = false;
 const timerDisplay = document.getElementById('timer-display');
 const fullTime = 15.0;
 
-// Event listeners for buttons
 document.getElementById('start-timer').addEventListener('click', startTimer);
 document.getElementById('pause-timer').addEventListener('click', pauseTimer);
 document.getElementById('reset-timer').addEventListener('click', resetTimer);
 
-// Set up the progress circle
 const progressCircle = document.querySelector('.progress-ring__circle');
 const radius = progressCircle.r.baseVal.value;
 const circumference = 2 * Math.PI * radius;

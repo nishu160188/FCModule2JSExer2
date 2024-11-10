@@ -33,7 +33,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    bottom: 50px; /* Adjusted to place controls inside the circle */
+    bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -59,18 +59,16 @@ body {
     height: 200px;
 }
 
-/* Dashed outer border */
 .progress-ring__border {
-    stroke-dasharray: 1, 1; /* Creates dashed effect */
+    stroke-dasharray: 1, 1;
 }
 
-/* Inner animated progress circle */
 .progress-ring__circle {
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
     stroke: #00ffff;
     stroke-width: 2;
-    stroke-dasharray: 565.48; /* Circumference */
-    stroke-dashoffset: 565.48; /* Start fully offset (invisible) */
+    stroke-dasharray: 565.48;
+    stroke-dashoffset: 565.48;
     transition: stroke-dashoffset 0.1s;
 }
