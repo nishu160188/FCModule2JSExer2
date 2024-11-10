@@ -57,17 +57,19 @@ body {
     left: 0;
     width: 200px;
     height: 200px;
-    transform: rotate(0deg);
-    border: 1px dashed white;
-    border-radius: 50%;
 }
 
+/* Dashed outer border */
+.progress-ring__border {
+    stroke-dasharray: 1, 1; /* Creates dashed effect */
+}
+
+/* Inner animated progress circle */
 .progress-ring__circle {
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
-    fill: transparent;
     stroke: #00ffff;
-    stroke-width: 10;
+    stroke-width: 2;
     stroke-dasharray: 565.48; /* Circumference */
     stroke-dashoffset: 565.48; /* Start fully offset (invisible) */
     transition: stroke-dashoffset 0.1s;
